@@ -5,8 +5,8 @@ import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const upcomingEvents = [
   {
-    title: "Congresso Brasileiro de Análises Clínicas 2025",
-    date: "15-18 Mai 2025",
+    title: "Congresso Brasileiro de Análises Clínicas 2026",
+    date: "15-18 Mai 2026",
     location: "São Paulo, SP",
     venue: "Expo Center Norte",
     type: "Congresso",
@@ -14,15 +14,15 @@ const upcomingEvents = [
   },
   {
     title: "Workshop: IA Aplicada ao Diagnóstico",
-    date: "22 Jun 2025",
+    date: "22 Jun 2026",
     location: "Online",
     venue: "Plataforma Virtual",
     type: "Workshop",
     description: "Workshop prático sobre aplicação de inteligência artificial em laudos e análise de imagens laboratoriais.",
   },
   {
-    title: "Feira Hospitalar 2025",
-    date: "20-23 Jul 2025",
+    title: "Feira Hospitalar 2026",
+    date: "20-23 Jul 2026",
     location: "São Paulo, SP",
     venue: "São Paulo Expo",
     type: "Feira",
@@ -30,7 +30,7 @@ const upcomingEvents = [
   },
   {
     title: "Simpósio de Microbiologia Clínica",
-    date: "10-11 Ago 2025",
+    date: "10-11 Ago 2026",
     location: "Rio de Janeiro, RJ",
     venue: "Centro de Convenções RioCenter",
     type: "Simpósio",
@@ -39,9 +39,9 @@ const upcomingEvents = [
 ];
 
 const pastEvents = [
-  { title: "Webinar: Gestão da Qualidade em Tempos de Crise", date: "Mar 2025", type: "Webinar" },
-  { title: "Encontro Nacional de Patologistas", date: "Fev 2025", type: "Encontro" },
-  { title: "Seminário de Automação Laboratorial", date: "Jan 2025", type: "Seminário" },
+  { title: "Webinar: Gestão da Qualidade em Tempos de Crise", date: "Mar 2026", type: "Webinar" },
+  { title: "Encontro Nacional de Patologistas", date: "Fev 2026", type: "Encontro" },
+  { title: "Seminário de Automação Laboratorial", date: "Jan 2026", type: "Seminário" },
 ];
 
 export default function Eventos() {
