@@ -12,6 +12,21 @@ import AdminLayout from "./pages/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import NewsList from "./pages/admin/NewsList";
 import NewsForm from "./pages/admin/NewsForm";
+import NewsDetail from "./pages/NewsDetail";
+import QuemSomos from "./pages/QuemSomos";
+import Equipe from "./pages/Equipe";
+import Contato from "./pages/Contato";
+import Anuncie from "./pages/Anuncie";
+import Colunistas from "./pages/Colunistas";
+import Papers from "./pages/Papers";
+import TVLabor from "./pages/TVLabor";
+import Catalogo from "./pages/Catalogo";
+import Carreira from "./pages/Carreira";
+import Eventos from "./pages/Eventos";
+import Newsletter from "./pages/Newsletter";
+import Privacidade from "./pages/Privacidade";
+import Termos from "./pages/Termos";
+import Cookies from "./pages/Cookies";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +40,21 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/noticias/:id" element={<NewsDetail />} />
+            <Route path="/quem-somos" element={<QuemSomos />} />
+            <Route path="/equipe" element={<Equipe />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/anuncie" element={<Anuncie />} />
+            <Route path="/colunistas" element={<Colunistas />} />
+            <Route path="/papers" element={<Papers />} />
+            <Route path="/tv" element={<TVLabor />} />
+            <Route path="/catalogo" element={<Catalogo />} />
+            <Route path="/carreira" element={<Carreira />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path="/newsletter" element={<Newsletter />} />
+            <Route path="/privacidade" element={<Privacidade />} />
+            <Route path="/termos" element={<Termos />} />
+            <Route path="/cookies" element={<Cookies />} />
             <Route
               path="/admin"
               element={
