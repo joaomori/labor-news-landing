@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Menu, X, Search, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-labornews.png";
 
 const navItems = [
-  { label: "Notícias", href: "#noticias", hasDropdown: true },
-  { label: "Papers", href: "#papers" },
-  { label: "Colunistas", href: "#colunistas" },
-  { label: "Especiais", href: "#especiais" },
-  { label: "Catálogo", href: "#catalogo" },
-  { label: "Multimídia", href: "#multimidia" },
-  { label: "Sua Carreira", href: "#carreira" },
+  { label: "Notícias", href: "/#noticias" },
+  { label: "Papers", href: "/papers" },
+  { label: "Colunistas", href: "/colunistas" },
+  { label: "TV Labor", href: "/tv" },
+  { label: "Catálogo", href: "/catalogo" },
+  { label: "Eventos", href: "/eventos" },
+  { label: "Sua Carreira", href: "/carreira" },
 ];
 
 export function Header() {
@@ -45,25 +46,25 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <a href="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <img 
                 src={logo} 
                 alt="LaborNews" 
                 className="h-10 w-auto brightness-0 invert"
               />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="nav-link py-5 relative group"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -108,17 +109,20 @@ export function Header() {
             >
               <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <motion.div
                     key={item.label}
-                    href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="text-primary-foreground py-2 border-b border-primary-foreground/10 last:border-0"
-                    onClick={() => setIsOpen(false)}
                   >
-                    {item.label}
-                  </motion.a>
+                    <Link
+                      to={item.href}
+                      className="text-primary-foreground py-2 border-b border-primary-foreground/10 last:border-0 block"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
