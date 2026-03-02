@@ -14,6 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
+import ImageUpload from "@/components/admin/ImageUpload";
 
 const categories = [
   "Análises Clínicas",
@@ -31,7 +32,7 @@ const newsSchema = z.object({
   excerpt: z.string().trim().max(500).optional().or(z.literal("")),
   content: z.string().trim().max(50000).optional().or(z.literal("")),
   category: z.string().optional().or(z.literal("")),
-  image_url: z.string().url("URL inválida").optional().or(z.literal("")),
+  image_url: z.string().optional().or(z.literal("")),
   featured: z.boolean(),
   published: z.boolean(),
 });
@@ -170,8 +171,10 @@ export default function NewsForm() {
 
           <FormField control={form.control} name="image_url" render={({ field }) => (
             <FormItem>
-              <FormLabel>URL da Imagem</FormLabel>
-              <FormControl><Input {...field} placeholder="https://..." /></FormControl>
+              <FormLabel>Imagem</FormLabel>
+              <FormControl>
+                <ImageUpload value={field.value ?? ""} onChange={field.onChange} />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )} />
