@@ -34,7 +34,7 @@ export function NewsSection() {
 
   if (isLoading) {
     return (
-      <section id="noticias" className="py-8 bg-background">
+    <section id="artigos" className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <Skeleton className="h-12 w-full mb-8 rounded-lg" />
           <div className="grid lg:grid-cols-3 gap-6 mb-12">
@@ -53,24 +53,24 @@ export function NewsSection() {
 
   if (news.length === 0) {
     return (
-      <section id="noticias" className="py-16 bg-background">
+    <section id="artigos" className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="section-title">Notícias</h2>
-          <p className="text-muted-foreground">Nenhuma notícia publicada ainda. Volte em breve!</p>
+          <h2 className="section-title">Artigos</h2>
+          <p className="text-muted-foreground">Nenhum artigo publicado ainda. Volte em breve!</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="noticias" className="py-8 bg-background">
+    <section id="artigos" className="py-8 bg-background">
       <div className="container mx-auto px-4">
         {/* Ticker Bar */}
         {tickerNews.length > 0 && (
           <div className="flex items-center mb-8 bg-card rounded-lg overflow-hidden shadow-sm">
             <div className="bg-accent text-accent-foreground px-4 py-3 flex items-center gap-2 font-semibold text-sm whitespace-nowrap">
               <Zap className="w-4 h-4" />
-              ÚLTIMAS NOTÍCIAS
+              ÚLTIMOS ARTIGOS
             </div>
             <div className="flex-1 px-4 py-3 overflow-hidden">
               <motion.p key={tickerIndex} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-foreground text-sm truncate">
@@ -177,7 +177,7 @@ export function NewsSection() {
             {sideNews.length > 0 && (
               <>
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="section-title mb-0">Mais Notícias</h2>
+                  <h2 className="section-title mb-0">Mais Artigos</h2>
                 </div>
                 <div className="space-y-4">
                   {sideNews.map((item, index) => (
