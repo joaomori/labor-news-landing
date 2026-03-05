@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo-labornews.png";
 
 const navItems = [
-  { label: "Notícias", href: "/#noticias" },
+  { label: "Artigos", href: "/#artigos" },
   { label: "Papers", href: "/papers" },
   { label: "Colunistas", href: "/colunistas" },
   { label: "TV Labor", href: "/tv" },

@@ -3,9 +3,9 @@ import { Microscope, FlaskConical, Newspaper, Users, Briefcase, Video } from "lu
 import { Link } from "react-router-dom";
 
 const categories = [
-  { icon: Newspaper, label: "Geral", color: "bg-primary", href: "/#noticias" },
-  { icon: Microscope, label: "Análises Clínicas", color: "bg-accent", href: "/#noticias" },
-  { icon: FlaskConical, label: "Instrumentação", color: "bg-gold", href: "/#noticias" },
+  { icon: Newspaper, label: "Geral", color: "bg-primary", href: "/#artigos" },
+  { icon: Microscope, label: "Análises Clínicas", color: "bg-accent", href: "/#artigos" },
+  { icon: FlaskConical, label: "Instrumentação", color: "bg-gold", href: "/#artigos" },
   { icon: Users, label: "Colunistas", color: "bg-navy-light", href: "/colunistas" },
   { icon: Briefcase, label: "Sua Carreira", color: "bg-coral", href: "/carreira" },
   { icon: Video, label: "Multimídia", color: "bg-primary", href: "/tv" },
