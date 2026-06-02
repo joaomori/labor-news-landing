@@ -1,0 +1,3 @@
+CREATE POLICY "Admins can manage all files in newspapers bucket" ON storage.objects FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin'::public.app_role) AND bucket_id = 'newspapers') WITH CHECK (public.has_role(auth.uid(), 'admin'::public.app_role) AND bucket_id = 'newspapers');
+
+CREATE POLICY "Anyone can read files in newspapers bucket" ON storage.objects FOR SELECT TO anon, authenticated USING (bucket_id = 'newspapers');
