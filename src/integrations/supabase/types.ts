@@ -56,6 +56,45 @@ export type Database = {
         }
         Relationships: []
       }
+      newspapers: {
+        Row: {
+          cover_image_url: string | null
+          created_at: string
+          description: string | null
+          edition: string | null
+          edition_date: string | null
+          id: string
+          pdf_url: string | null
+          published: boolean
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          cover_image_url?: string | null
+          created_at?: string
+          description?: string | null
+          edition?: string | null
+          edition_date?: string | null
+          id?: string
+          pdf_url?: string | null
+          published?: boolean
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          cover_image_url?: string | null
+          created_at?: string
+          description?: string | null
+          edition?: string | null
+          edition_date?: string | null
+          id?: string
+          pdf_url?: string | null
+          published?: boolean
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
